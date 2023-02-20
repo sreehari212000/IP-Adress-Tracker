@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+
+  <!-- leaflet links -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
+  <!-- end of leaf let links -->
+
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>IP ADDRESS TRACKER</h2>
+    <form class="search-field">
+      <input type="text" id="search" required placeholder="Enter IP Adress...">
+      <button>
+        <img src="./images/icon-arrow.svg" alt="">
+      </button>
+    </form>
+
+    <div class="output-container">
+
+      <div class="cont fchild b-right">
+        <p>IP ADDRESS</p>
+        <h3 id="ip">-------------</h3>
+      </div>
+
+      <div class="cont b-right">
+        <p>LOCATION</p>
+        <h3><span id="country">-----</span>, <span id="region">-----</span></h3>
+      </div>
+
+      <div class="cont b-right">
+        <p>TIMEZONE</p>
+        <h3>UTC<span id="timezone">--:--</span></h3>
+      </div>
+
+      <div class="cont lchild">
+        <p>ISP</p>
+        <h3 id="isp">----------</h3>
+      </div>
+    </div>
+
+    <div id="map">
+      
+    </div>
+
+
+
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('https://fonts.google.com/specimen/Rubik');
+}
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik';
+}
+
+
+:root{
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+
+
+.container{
+    position: relative;
+    background: url('./images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    height: 100vh;
+    min-width: 350px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container > h2{
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 30px;
+    color: white;
+}
+
+.search-field{
+    width: 85%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 70px auto;
+    display: flex;
+    max-width: 600px;
+}
+.search-field > input{
+    padding: 10px;
+    width: 95%;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: medium;
+}
+.search-field > button{
+    background-color: black;
+    width: 10%;
+}
+
+.output-container{
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+    top: 35%;
+    left: 30%;
+    background-color: white;
+    margin: 0 auto;
+    width: 40%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+}
+.fchild{
+    margin-top: 25px;
+}
+.lchild{
+    margin-bottom: 25px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+.cont > p{
+    color: var(--dark-gray);
+    font-weight: 300;
+    font-size: 14px;
+}
+.cont > h3{
+    color: var(--very-dark-gray);
+    /* font-weight: 900; */
+}
+
+#map {
+    height: 100vh; 
+    width: 100%;
+    position: static;
+    top: 0;
+    z-index: -1;
+}
+ 
+@media (min-width: 750px) and (max-width:1269px){
+    .output-container{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1270px){
+    .output-container{
+        margin-top: 50px;
+        top: 27%;
+        left: 16%;
+        width: 75%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        height: 130px;
+        font-size: 18px;
+    }
+    .fchild{
+        margin-top: 0;
+    }
+    .lchild{
+        margin-bottom: 0;
+    }
+    .b-right{
+        border-right: 1px solid var(--dark-gray);
+    }
+    .cont{
+        padding: 0 20px;
+    }
+}
